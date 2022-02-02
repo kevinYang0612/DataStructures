@@ -146,6 +146,14 @@ public class SinglyLinkedList<E>
             }
         }
     }
+    public void swap(int n1, int n2)
+    {
+        ListNode<E> traverse1 = nodeAt(n1);
+        ListNode<E> traverse2 = nodeAt(n2);
+        E data = traverse1.data;
+        traverse1.data = traverse2.data;
+        traverse2.data = data;
+    }
 
     public String toString()
     {
