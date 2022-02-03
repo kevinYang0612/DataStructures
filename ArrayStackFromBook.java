@@ -41,6 +41,6 @@ public class ArrayStackFromBook
     {
         Object[] newArray = new Object[this.array.length * 2];
         System.arraycopy(this.array, 0, newArray, 0, this.array.length);
-        this.array = newArray;
+        this.array = newArray; 
     }
 }
