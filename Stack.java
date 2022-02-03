@@ -31,6 +31,6 @@ public class Stack<T> implements Iterable<T>
     @Override
     public java.util.Iterator<T> iterator()
     {
-        return list.iterator();
+        return list.iterator(); 
     }
 }
