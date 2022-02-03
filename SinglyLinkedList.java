@@ -171,7 +171,7 @@ public class SinglyLinkedList<E>
                 traverse = traverse.next;
             }
             result += "]";
-            return result;
+            return result; 
         }
     }
 }
