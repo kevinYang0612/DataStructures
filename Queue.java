@@ -31,6 +31,6 @@ public class Queue<T> implements Iterable<T>
     @Override
     public java.util.Iterator<T> iterator()
     {
-        return this.iterator();
+        return this.iterator(); 
     }
 }
