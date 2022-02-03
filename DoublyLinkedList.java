@@ -287,7 +287,7 @@ public class DoublyLinkedList<T> implements Iterable<T>
     @Override
     public java.util.Iterator<T> iterator()
     {
-        return new java.util.Iterator<T>()
+        return new java.util.Iterator<T>() 
         {
             private Node<T> traverse = head;
             @Override
