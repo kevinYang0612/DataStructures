@@ -70,7 +70,7 @@ public class BinarySearchTree<T extends Comparable<T>>
     public boolean remove(T element)
     {
         // if (!contains(element)) return false;
-
+        
         this.root = remove(this.root, element);
         nodeCount--;
         return true;
