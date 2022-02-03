@@ -254,6 +254,32 @@ public class DoublyLinkedList<T> implements Iterable<T>
 //        node.next.previous = node;    // node.next is already updated, the element behind removing element
 //        size--;                       // previous pointing to itself
     }
+    
+    /**
+    *   This is detect if a linkedlist is a circular linkedlist
+    *   by setting two pointers, one is fast and one is slow
+    *   fast is moving by 2 steps and slow is moving by 1 step
+    *   if circular, fast will meet slow
+    */
+    public boolean hasCycle(ListNode head) 
+    {
+        if (head == null)
+        {
+            return false;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while(slow != fast)
+        {
+            if (fast == null || fast.next == null) // reach to the end
+            {
+                return false;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
+    }
     public boolean contains(Object obj)
     {
         return indexOf(obj) != -1;
