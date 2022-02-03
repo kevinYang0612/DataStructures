@@ -47,15 +47,6 @@ public class SpecialStack
     }
     public static void main(String[] args)
     {
-        SpecialStack stack = new SpecialStack();
-        stack.push(-6);
-        stack.push(3);
-        stack.push(0);
-        stack.push(0);
-        stack.push(12);
-        stack.push(-7);
-        System.out.println(stack.findMin());
-        System.out.println(stack.pop());
-        System.out.println(stack.findMin());
+
     }
 }
