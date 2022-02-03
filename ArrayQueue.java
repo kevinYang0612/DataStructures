@@ -70,5 +70,5 @@ public class ArrayQueue
         this.array = newArray;
         this.front = 0;     // Since it is recopied, A and C are lost, D is in the front, reset front to 0
         this.back = this.currentSize - 1;   // reset the back as well
-    }
+    } 
 }
