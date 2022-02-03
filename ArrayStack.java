@@ -54,5 +54,5 @@ public class ArrayStack<T>
             throw new RuntimeException("Empty stack");
         }
         return this.elements[this.size - 1];
-    }
+    } 
 }
