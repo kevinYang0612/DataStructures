@@ -222,6 +222,31 @@ public class BinarySearchTree<T extends Comparable<T>>
         }
 
     }
+    public void printLevelOrder()
+    {
+        int level = 1;
+        while (printLevelOrder(this.root, level))
+        {
+            level++;
+        }
+    }
+    public boolean printLevelOrder(Node root, int level)
+    {
+        if (root != null)
+        {
+            if (level == 1)
+            {
+                System.out.println(root.data + " ");
+                return true;
+            }
+            boolean left = printLevelOrder(root.left, level - 1);
+            boolean right = printLevelOrder(root.right, level - 1);
+            
+            return left || right;
+        }
+        return false;
+    }
+    
     public int numberOfOneChildNodes()
     {
         return numberOfOneChildNodes(this.root);
@@ -378,29 +403,5 @@ public class BinarySearchTree<T extends Comparable<T>>
     }
     public static void main(String[] args)
     {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
-        bst.add(20);
-        bst.add(11);
-        bst.add(21);
-        bst.add(24);
-        bst.add(22);
-        bst.add(37);
-        bst.add(40);
-        bst.add(7);
-        bst.add(1);
-        bst.add(6);
-        bst.add(4);
-        System.out.println(bst.findMax());
-        System.out.println(bst.findMin());
-        System.out.println();
-
-        bst.printInOrder();
-        bst.printPreOrder();
-        bst.printPostOrder();
-
-        System.out.println(bst.numberOfOneChildNodes());
-
-
-
     }
 }
