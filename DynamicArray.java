@@ -174,6 +174,5 @@ public class DynamicArray<T> implements Iterable<T>
             return sb.append(this.array[this.length - 1] + "]").toString();
         }
     }
-
 }
 
