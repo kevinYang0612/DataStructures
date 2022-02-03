@@ -131,7 +131,7 @@ public class MySet
         if (testSet.isEmpty()) {
             System.out.println("Something is wrong 2.");
         }
-        System.out.println("Inserting Belinda ...");
+        System.out.println("Inserting Belinda ..."); 
         testSet.insert("Belinda");
         testSet.printAll();
         
