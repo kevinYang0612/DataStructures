@@ -144,4 +144,59 @@ public class SortAlgorithms
         array[i] = array[j];
         array[j] = temp;
     }
+        public static void sortBooleanArray(boolean [] arr) {
+        int [] m = new int [2];
+        for(Boolean b : arr)
+        {
+            if(b)
+            {
+                m[1]++;
+            }
+            else
+            {
+                m[0]++;
+            }
+        }
+        int index = 0;
+        for(int i = 0; i < m.length; i++)
+        {
+            for(int j = 0; j < m[i]; j++)
+            {
+                if(i == 0) arr[index++] = false;
+                else arr[index++] = true;
+            }
+        }
+    }
+    public static Object[] sortBooleanArray1(Object[] arr)
+    {
+        int[] m = new int[3]; // contain true or false
+        Object[] newArray = new Object[arr.length];
+        for (Object obj : arr)
+        {
+            if (!(obj instanceof Boolean))
+            {
+                m[1]++;
+            }
+            else if ((boolean)obj)
+            {
+                m[2]++;
+            }
+            else
+            {
+                m[0]++;
+            }
+        }
+        int index = 0;
+        for (int i = 0; i < m.length; i++)
+        {
+            for (int j = 0; j < m[i]; j++)
+            {
+                if (i == 0) newArray[index] = false;
+                else if (i == 1) newArray[index] = "maybe";
+                else newArray[index] = true;
+                index++;
+            }
+        }
+        return newArray;
+    }
 }
