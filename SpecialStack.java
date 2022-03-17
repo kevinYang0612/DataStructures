@@ -23,9 +23,10 @@ public class SpecialStack
         if (t < this.minElement)        // check if popping element is smaller than min
         {
             result = this.minElement;
-            this.minElement = 2 * this.minElement - t;  // update the min element
-        }                                               // unique way to unraveling
-        return result;
+            this.minElement = 2 * this.minElement - t;
+            return result;                                          
+        }
+        return t;                                                     
     }
     public void push(int t)
     {
