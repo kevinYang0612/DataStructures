@@ -393,6 +393,8 @@ public class BinarySearchTree<T extends Comparable<T>>
         System.out.println(bst.findMax());
         System.out.println(bst.findMin());
         System.out.println();
+        bst.remove(6);
+        bst.remove(37);
 
         bst.printInOrder();
         bst.printPreOrder();
